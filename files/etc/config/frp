@@ -27,8 +27,8 @@ config proxy
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
 	option use_compression '1'
-	option subdomain 'thr'
-	option remark 'thr'
+	option subdomain 'thrr'
+	option remark 'thrr'
 
 config proxy
 	option enable '1'
