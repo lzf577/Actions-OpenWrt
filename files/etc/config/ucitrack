@@ -46,9 +46,6 @@ config cron
 config luci_splash
 	option init 'luci_splash'
 
-config upnpd
-	option init 'miniupnpd'
-
 config ntpclient
 	option init 'ntpclient'
 
@@ -58,21 +55,48 @@ config samba
 config tinyproxy
 	option init 'tinyproxy'
 
-config arpbind
-	option init 'arpbind'
-
-config turboacc
-	option init 'turboacc'
-
 config mjpg-streamer
 	option init 'mjpg-streamer'
+
+config upnpd
+	option init 'miniupnpd'
+
+config nlbwmon
+	option init 'nlbwmon'
+
+config zerotier
+	option init 'zerotier'
+
+config adbyby
+	option init 'adbyby'
+
+config arpbind
+	option init 'arpbind'
 
 config frp
 	option init 'frp'
 
+config ipsec
+	option init 'ipsec'
+
+config mia
+	option init 'mia'
+
 config shadowsocksr
 	option init 'shadowsocksr'
 
+config turboacc
+	option init 'turboacc'
+
+config unblockmusic
+	option init 'unblockmusic'
+
+config vlmcsd
+	option init 'kms'
+
 config vsftpd
 	option init 'vsftpd'
+
+config xlnetacc
+	option init 'xlnetacc'
 

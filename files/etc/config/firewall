@@ -5,8 +5,8 @@ config defaults
 	option output 'ACCEPT'
 	option forward 'REJECT'
 	option fullcone '0'
-	option flow_offloading '1'
-	option flow_offloading_hw '1'
+	option flow_offloading '0'
+	option flow_offloading_hw '0'
 
 config zone
 	option name 'lan'
@@ -136,8 +136,91 @@ config rule
 config include
 	option path '/etc/firewall.user'
 
+config include 'zerotier'
+	option type 'script'
+	option path '/etc/zerotier.start'
+	option reload '1'
+
+config include 'miniupnpd'
+	option type 'script'
+	option path '/usr/share/miniupnpd/firewall.include'
+	option family 'any'
+	option reload '1'
+
+config include 'adbyby'
+	option type 'script'
+	option path '/var/etc/adbyby.include'
+	option reload '1'
+
+config rule 'adblock'
+	option name 'adblock'
+	option target 'DROP'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '8118'
+
+config include 'ipsecd'
+	option type 'script'
+	option path '/etc/ipsec.include'
+	option reload '1'
+
+config rule 'ike'
+	option name 'ike'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'udp'
+	option dest_port '500'
+
+config rule 'ipsec'
+	option name 'ipsec'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'udp'
+	option dest_port '4500'
+
+config rule 'ah'
+	option name 'ah'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'ah'
+
+config rule 'esp'
+	option name 'esp'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'esp'
+
+config zone 'VPN'
+	option name 'VPN'
+	option input 'ACCEPT'
+	option forward 'ACCEPT'
+	option output 'ACCEPT'
+	option network 'VPN'
+
+config forwarding 'vpn'
+	option name 'vpn'
+	option dest 'wan'
+	option src 'VPN'
+
+config include 'mia'
+	option type 'script'
+	option path '/etc/mia.include'
+	option reload '1'
+
 config include 'shadowsocksr'
 	option type 'script'
 	option path '/var/etc/shadowsocksr.include'
 	option reload '1'
+
+config include 'unblockmusic'
+	option type 'script'
+	option path '/var/etc/unblockmusic.include'
+	option reload '1'
+
+config rule 'kms'
+	option name 'kms'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '1688'
 
