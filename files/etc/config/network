@@ -6,7 +6,7 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fd4b:8cc4:ff22::/48'
+	option ula_prefix 'fd5a:ff5d:bed4::/48'
 	option packet_steering '1'
 
 config interface 'lan'
@@ -17,7 +17,7 @@ config interface 'lan'
 	option _orig_ifname 'eth0'
 	option _orig_bridge 'true'
 	option ifname 'eth0 eth1'
-	option ipaddr '192.168.7.1'
+	option ipaddr '192.168.2.1'
 
 config interface 'wan'
 	option proto 'dhcp'
