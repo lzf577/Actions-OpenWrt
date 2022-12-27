@@ -6,36 +6,34 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fdcc:8b7e:37e2::/48'
+	option ula_prefix 'fd4b:8cc4:ff22::/48'
+	option packet_steering '1'
 
 config interface 'lan'
 	option type 'bridge'
-	option ifname 'eth0.1'
 	option proto 'static'
 	option netmask '255.255.255.0'
 	option ip6assign '60'
-	option ipaddr '192.168.3.1'
+	option _orig_ifname 'eth0'
+	option _orig_bridge 'true'
+	option ifname 'eth0 eth1'
+	option ipaddr '192.168.7.1'
 
 config interface 'wan'
-	option ifname 'eth0.2'
 	option proto 'dhcp'
+	option _orig_ifname 'eth1'
+	option _orig_bridge 'false'
+	option ifname 'eth2'
 
 config interface 'wan6'
-	option ifname 'eth0.2'
-	option proto 'dhcpv6'
+	option _orig_ifname 'eth1'
+	option _orig_bridge 'false'
+	option proto 'dhcp'
+	option ifname 'eth2'
 
-config switch
-	option name 'switch0'
-	option reset '1'
-	option enable_vlan '1'
-
-config switch_vlan
-	option device 'switch0'
-	option vlan '1'
-	option ports '0 1 6t'
-
-config switch_vlan
-	option device 'switch0'
-	option vlan '2'
-	option ports '4 6t'
+config interface 'VPN'
+	option ifname 'ipsec0'
+	option proto 'static'
+	option ipaddr '10.10.10.1'
+	option netmask '255.255.255.0'
 
