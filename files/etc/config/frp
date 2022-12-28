@@ -14,7 +14,7 @@ config frp 'common'
 	option token 'UJOwn8RwuZponMLu'
 	option tls_enable '0'
 	option admin_enable '0'
-	option user '嘉兴S'
+	option user '嘉兴'
 	option server_addr 'linzifu.xyz'
 	option vhost_http_port '80'
 
@@ -27,8 +27,8 @@ config proxy
 	option use_encryption '1'
 	option use_compression '1'
 	option local_port '80'
-	option subdomain 'jxrs'
-	option remark 'jxrs'
+	option subdomain 'jxr'
+	option remark 'jxr'
 
 config proxy
 	option enable '1'
@@ -38,6 +38,6 @@ config proxy
 	option use_encryption '1'
 	option use_compression '1'
 	option remark 'ssh'
-	option remote_port '8000'
-	option local_ip '192.168.8.1'
+	option local_ip '192.168.6.1'
+	option remote_port '6000'
 
