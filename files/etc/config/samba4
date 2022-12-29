@@ -3,22 +3,9 @@ config samba
 	option workgroup 'WORKGROUP'
 	option charset 'UTF-8'
 	option description 'Samba on OpenWRT'
-	option name 'ytoss'
 	option homes '1'
 	option macos '1'
-
-config sambashare
-	option auto '1'
-	option name 'sda1'
-	option path '/mnt/sda1'
-	option read_only 'no'
-	option guest_ok 'yes'
-	option create_mask '0666'
-	option dir_mask '0777'
-	option device 'sda1'
-	option inherit_owner 'yes'
-
-
+	option name 'jxrs'
 
 config sambashare
 	option auto '1'
@@ -29,4 +16,17 @@ config sambashare
 	option create_mask '0666'
 	option dir_mask '0777'
 	option device 'sda3'
+	option inherit_owner 'yes'
+
+
+
+config sambashare
+	option auto '1'
+	option name 'sda1'
+	option path '/mnt/sda1'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0666'
+	option dir_mask '0777'
+	option device 'sda1'
 	option inherit_owner 'yes'

@@ -16,7 +16,7 @@ config frp 'common'
 	option token 'UJOwn8RwuZponMLu'
 	option tls_enable '0'
 	option admin_enable '0'
-	option user '宿舍'
+	option user '嘉兴s'
 
 config proxy
 	option enable '1'
@@ -27,8 +27,8 @@ config proxy
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
 	option use_compression '1'
-	option subdomain 'ytoss'
-	option remark 'ytoss'
+	option subdomain 'jxrs'
+	option remark 'jxrs'
 
 config proxy
 	option enable '1'
@@ -38,6 +38,6 @@ config proxy
 	option use_encryption '1'
 	option use_compression '1'
 	option remark 'ssh'
-	option local_ip '192.168.7.1'
-	option remote_port '7000'
+	option local_ip '192.168.8.1'
+	option remote_port '8000'
 
