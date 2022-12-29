@@ -1,0 +1,14 @@
+{
+ "id": "90203caba4",
+ "objtype": "world",
+ "roots": [
+  {
+   "identity": "90203caba4:0:e250393035a136e4561cbe871fc27a99d26fcd91bb7057b15db269d9491cb423aa17d94d7c23c04b0fe46d8c41f1aa1baa9d27cbfddc7eef0a8bca956f75505d",
+   "stableEndpoints": ["36.22.189.254/9993"]
+  }
+ ],
+ "signingKey": "511304ddf602144cdeb8f14338387056ac33145ddcfcee17cea2044ea0ba0a04c42733fa3146b4b4acc2777413e94f6bbc244fa7a9772e02c4efada7bcc24417",
+ "signingKey_SECRET": "2c319f8dc8b78f25b0cec9ebfaee3840c1a6f89b534fe3cc8124b6e835096cee2b91465bca5dbe15afa2d0aa0c34f4e4a88322f188137c177ff2e05fd5e1ce8f",
+ "updatesMustBeSignedBy": "511304ddf602144cdeb8f14338387056ac33145ddcfcee17cea2044ea0ba0a04c42733fa3146b4b4acc2777413e94f6bbc244fa7a9772e02c4efada7bcc24417",
+ "worldType": "moon"
+}
